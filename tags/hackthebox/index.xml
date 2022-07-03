@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hackthebox - Tag - Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/tags/hackthebox/</link>
+        <description>Hackthebox - Tag - Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</lastBuildDate><atom:link href="https://mondirkb.github.io/tags/hackthebox/" rel="self" type="application/rss+xml" /><item>
+    <title>Doctor machine</title>
+    <link>https://mondirkb.github.io/wiretups/doctor-machine/</link>
+    <pubDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</pubDate>
+    <author>moundir</author>
+    <guid>https://mondirkb.github.io/wiretups/doctor-machine/</guid>
+    <description><![CDATA[TODO: ADD [Linux, Enumeratin, SSTI, Splunk]
+Doctor (Linux) doctor-machine" doctor-machine  Enumeration rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scanPORT STATE SERVICE REASON VERSION22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu))Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernelExamine Port 80 - Apache server Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.]]></description>
+</item>
+</channel>
+</rss>

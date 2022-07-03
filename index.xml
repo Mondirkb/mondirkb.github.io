@@ -1,0 +1,61 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/</link>
+        <description>Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 16 Jun 2021 00:44:44 -0800</lastBuildDate>
+            <atom:link href="https://mondirkb.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Alfred</title>
+    <link>https://mondirkb.github.io/wiretups/alfred-machine/</link>
+    <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/wiretups/alfred-machine/</guid>
+    <description><![CDATA[Click here if you&rsquo;re interested in the room! This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!
+ How many TCP ports are open? What is the username and password for the log in panel? Find a feature of the tool that allows you to execute commands on the underlying system. What is the user.txt flag? Switching shells Size of the payload Token Impersonation Output of guid command Migrating and finding root.]]></description>
+</item>
+<item>
+    <title>Doctor machine</title>
+    <link>https://mondirkb.github.io/wiretups/doctor-machine/</link>
+    <pubDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</pubDate>
+    <author>moundir</author>
+    <guid>https://mondirkb.github.io/wiretups/doctor-machine/</guid>
+    <description><![CDATA[TODO: ADD [Linux, Enumeratin, SSTI, Splunk]
+Doctor (Linux) doctor-machine" doctor-machine  Enumeration rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scanPORT STATE SERVICE REASON VERSION22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu))Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernelExamine Port 80 - Apache server Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.]]></description>
+</item>
+<item>
+    <title>Emoji Support</title>
+    <link>https://mondirkb.github.io/posts/emoji-support/</link>
+    <pubDate>Tue, 01 Oct 2019 17:55:28 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/emoji-support/</guid>
+    <description><![CDATA[<p>Emoji can be enabled in a Hugo project in a number of ways.</p>]]></description>
+</item>
+<item>
+    <title>Theme wiretups - Built-in Shortcodes</title>
+    <link>https://mondirkb.github.io/posts/theme-wiretups-built-in-shortcodes/</link>
+    <pubDate>Wed, 04 Mar 2020 16:29:41 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/theme-wiretups-built-in-shortcodes/</guid>
+    <description><![CDATA[<p><strong>Hugo</strong> provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.</p>]]></description>
+</item>
+<item>
+    <title>Basic Markdown Syntax</title>
+    <link>https://mondirkb.github.io/posts/basic-markdown-syntax/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/basic-markdown-syntax/</guid>
+    <description><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>]]></description>
+</item>
+<item>
+    <title>Theme wiretups - bilibili Shortcode</title>
+    <link>https://mondirkb.github.io/posts/theme-wiretups-bilibili-shortcode/</link>
+    <pubDate>Tue, 03 Mar 2020 11:29:41 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/theme-wiretups-bilibili-shortcode/</guid>
+    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
+<p>The <code>bilibili</code> shortcode embeds a responsive video player for bilibili videos.</p>]]></description>
+</item>
+</channel>
+</rss>

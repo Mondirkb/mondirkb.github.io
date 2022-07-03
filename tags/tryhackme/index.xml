@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>TryHackMe - Tag - Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/tags/tryhackme/</link>
+        <description>TryHackMe - Tag - Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 16 Jun 2021 00:44:44 -0800</lastBuildDate><atom:link href="https://mondirkb.github.io/tags/tryhackme/" rel="self" type="application/rss+xml" /><item>
+    <title>Alfred</title>
+    <link>https://mondirkb.github.io/wiretups/alfred-machine/</link>
+    <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/wiretups/alfred-machine/</guid>
+    <description><![CDATA[Click here if you&rsquo;re interested in the room! This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!
+ How many TCP ports are open? What is the username and password for the log in panel? Find a feature of the tool that allows you to execute commands on the underlying system. What is the user.txt flag? Switching shells Size of the payload Token Impersonation Output of guid command Migrating and finding root.]]></description>
+</item>
+</channel>
+</rss>

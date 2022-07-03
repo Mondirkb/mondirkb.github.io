@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/categories/</link>
+        <description>Categories - Category - Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 04 Mar 2020 16:29:41 &#43;0800</lastBuildDate><atom:link href="https://mondirkb.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>wiretups</title>
+    <link>https://mondirkb.github.io/categories/wiretups/</link>
+    <pubDate>Wed, 04 Mar 2020 16:29:41 &#43;0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/categories/wiretups/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Markdown</title>
+    <link>https://mondirkb.github.io/categories/markdown/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/categories/markdown/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

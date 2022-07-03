@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CTF - Category - Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/categories/ctf/</link>
+        <description>CTF - Category - Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 16 Jun 2021 00:44:44 -0800</lastBuildDate><atom:link href="https://mondirkb.github.io/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+    <title>Doctor machine</title>
+    <link>https://mondirkb.github.io/posts/doctor-machine/</link>
+    <pubDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</pubDate>
+    <author>moundir</author>
+    <guid>https://mondirkb.github.io/posts/doctor-machine/</guid>
+    <description><![CDATA[TODO: ADD [Linux, Enumeratin, SSTI, Splunk]
+Doctor (Linux) doctor-machine" doctor-machine  Enumeration rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scanPORT STATE SERVICE REASON VERSION22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu))Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernelExamine Port 80 - Apache server Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.]]></description>
+</item>
+<item>
+    <title>Alfred</title>
+    <link>https://mondirkb.github.io/posts/alfred-machine/</link>
+    <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/posts/alfred-machine/</guid>
+    <description><![CDATA[Click here if you&rsquo;re interested in the room! This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!
+ How many TCP ports are open? What is the username and password for the log in panel? Find a feature of the tool that allows you to execute commands on the underlying system. What is the user.txt flag? Switching shells Size of the payload Token Impersonation Output of guid command Migrating and finding root.]]></description>
+</item>
+</channel>
+</rss>

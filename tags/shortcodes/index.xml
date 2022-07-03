@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>shortcodes - Tag - Kebir Moundir Chemseddine</title>
+        <link>https://mondirkb.github.io/tags/shortcodes/</link>
+        <description>shortcodes - Tag - Kebir Moundir Chemseddine</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 04 Mar 2020 16:29:41 &#43;0800</lastBuildDate><atom:link href="https://mondirkb.github.io/tags/shortcodes/" rel="self" type="application/rss+xml" /><item>
+    <title>Theme wiretups - Built-in Shortcodes</title>
+    <link>https://mondirkb.github.io/posts/theme-wiretups-built-in-shortcodes/</link>
+    <pubDate>Wed, 04 Mar 2020 16:29:41 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/theme-wiretups-built-in-shortcodes/</guid>
+    <description><![CDATA[<p><strong>Hugo</strong> provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.</p>]]></description>
+</item>
+<item>
+    <title>Theme wiretups - bilibili Shortcode</title>
+    <link>https://mondirkb.github.io/posts/theme-wiretups-bilibili-shortcode/</link>
+    <pubDate>Tue, 03 Mar 2020 11:29:41 &#43;0800</pubDate>
+    <author>Dillon</author>
+    <guid>https://mondirkb.github.io/posts/theme-wiretups-bilibili-shortcode/</guid>
+    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
+<p>The <code>bilibili</code> shortcode embeds a responsive video player for bilibili videos.</p>]]></description>
+</item>
+</channel>
+</rss>

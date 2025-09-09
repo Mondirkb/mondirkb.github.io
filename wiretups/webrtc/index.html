@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Meeting Web App with Face Recognition and WebRTC - Kebir Moundir Chemseddine</title><meta name="Description" content=""><meta property="og:url" content="https://mondirkb.github.io/wiretups/webrtc/">
+  <meta property="og:site_name" content="Kebir Moundir Chemseddine">
+  <meta property="og:title" content="Meeting Web App with Face Recognition and WebRTC">
+  <meta property="og:description" content="Click here to view the GitHub repository! This guide explains the development, functionality, and setup of a Meeting Web App that uses Flask, WebRTC, and face recognition for authentication and real-time communication.
+Table of Contents Project Overview Features Technologies Used How It Works WebRTC Integration How to Run the Project Challenges and Solutions Future Improvements WebRTC Quality Metrics 1) Project Overview This project is a Meeting Web App that allows users to:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="wiretups">
+    <meta property="article:published_time" content="2025-09-08T12:00:00-08:00">
+    <meta property="article:modified_time" content="2025-09-08T12:00:00-08:00">
+    <meta property="article:tag" content="Flask">
+    <meta property="article:tag" content="Face Recognition">
+    <meta property="article:tag" content="WebRTC">
+    <meta property="og:image" content="https://mondirkb.github.io/wiretups/webrtc/preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mondirkb.github.io/wiretups/webrtc/preview.png">
+  <meta name="twitter:title" content="Meeting Web App with Face Recognition and WebRTC">
+  <meta name="twitter:description" content="Click here to view the GitHub repository! This guide explains the development, functionality, and setup of a Meeting Web App that uses Flask, WebRTC, and face recognition for authentication and real-time communication.
+Table of Contents Project Overview Features Technologies Used How It Works WebRTC Integration How to Run the Project Challenges and Solutions Future Improvements WebRTC Quality Metrics 1) Project Overview This project is a Meeting Web App that allows users to:">
+      <meta name="twitter:site" content="@mondir_kb">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mondirkb.github.io/wiretups/webrtc/" /><link rel="prev" href="https://mondirkb.github.io/wiretups/alfred-machine/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Meeting Web App with Face Recognition and WebRTC",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mondirkb.github.io\/wiretups\/webrtc\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/mondirkb.github.io\/wiretups\/webrtc\/preview.png",
+                            "width":  1851 ,
+                            "height":  721 
+                        }],"genre": "posts","keywords": "Flask, Face Recognition, WebRTC","wordcount":  1235 ,
+        "url": "https:\/\/mondirkb.github.io\/wiretups\/webrtc\/","datePublished": "2025-09-08T12:00:00-08:00","dateModified": "2025-09-08T12:00:00-08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "KEBIR MOUNDIR CHEMSEDDINE"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kebir Moundir Chemseddine"><span class="header-title-pre">>$ echo</span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/wiretups/"> Wiretups </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kebir Moundir Chemseddine"><span class="header-title-pre">>$ echo</span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/wiretups/" title="">Wiretups</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Meeting Web App with Face Recognition and WebRTC</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>KEBIR MOUNDIR CHEMSEDDINE</a></span>&nbsp;<span class="post-category">included in <a href="/categories/projects/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Projects</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-09-08">2025-09-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1235 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#click-here-to-view-the-github-repository">Click here to view the GitHub repository!</a>
+      <ul>
+        <li><a href="#table-of-contents">Table of Contents</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-project-overview">1) Project Overview</a></li>
+    <li><a href="#2-features">2) Features</a></li>
+    <li><a href="#3-technologies-used">3) Technologies Used</a></li>
+    <li><a href="#4-how-it-works">4) How It Works</a>
+      <ul>
+        <li><a href="#user-registration"><strong>User Registration</strong></a></li>
+        <li><a href="#user-login"><strong>User Login</strong></a></li>
+        <li><a href="#meeting-rooms"><strong>Meeting Rooms</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#5-webrtc-integration">5) WebRTC Integration</a>
+      <ul>
+        <li><a href="#how-webrtc-works"><strong>How WebRTC Works</strong></a></li>
+        <li><a href="#code-explanation"><strong>Code Explanation</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#6-how-to-run-the-project">6) How to Run the Project</a></li>
+    <li><a href="#7-challenges-and-solutions">7) Challenges and Solutions</a>
+      <ul>
+        <li><a href="#challenge-1-face-recognition-accuracy"><strong>Challenge 1: Face Recognition Accuracy</strong></a></li>
+        <li><a href="#challenge-2-webrtc-connection-issues"><strong>Challenge 2: WebRTC Connection Issues</strong></a></li>
+        <li><a href="#challenge-3-secure-data-storage"><strong>Challenge 3: Secure Data Storage</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#8-future-improvements">8) Future Improvements</a></li>
+    <li><a href="#9-webrtc-quality-metrics">9) WebRTC Quality Metrics</a>
+      <ul>
+        <li><a href="#example-code-javascript">Example Code (JavaScript)</a></li>
+        <li><a href="#what-these-metrics-tell-us">What These Metrics Tell Us</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="click-here-to-view-the-github-repository"><a href="https://github.com/Mondirkb/Meeting-App-last" target="_blank" rel="noopener noreffer ">Click here to view the GitHub repository!</a></h2>
+<p><strong>This guide explains the development, functionality, and setup of a Meeting Web App that uses Flask, WebRTC, and face recognition for authentication and real-time communication.</strong></p>
+<hr>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+<li><a href="#1" rel="">Project Overview</a></li>
+<li><a href="#2" rel="">Features</a></li>
+<li><a href="#3" rel="">Technologies Used</a></li>
+<li><a href="#4" rel="">How It Works</a></li>
+<li><a href="#5" rel="">WebRTC Integration</a></li>
+<li><a href="#6" rel="">How to Run the Project</a></li>
+<li><a href="#7" rel="">Challenges and Solutions</a></li>
+<li><a href="#8" rel="">Future Improvements</a></li>
+<li><a href="#9" rel="">WebRTC Quality Metrics</a></li>
+</ol>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="1-project-overview">1) Project Overview</h2>
+<p>This project is a <strong>Meeting Web App</strong> that allows users to:</p>
+<ul>
+<li>Register and log in using <strong>face recognition</strong>.</li>
+<li>Join or create virtual meeting rooms using <strong>WebRTC</strong>.</li>
+<li>Securely store user data in a <strong>SQLite database</strong>.</li>
+</ul>
+<p>The app is built using <strong>Flask</strong> as the backend framework and integrates <strong>OpenCV</strong> and <strong>face_recognition</strong> for face authentication.</p>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="2-features">2) Features</h2>
+<ul>
+<li>
+<p><strong>Face Recognition Authentication:</strong></p>
+<ul>
+<li>Users can register by taking a photo, and their face encoding is stored securely.</li>
+<li>During login, the app verifies the user&rsquo;s face against the stored encoding.</li>
+</ul>
+</li>
+<li>
+<p><strong>Meeting Rooms:</strong></p>
+<ul>
+<li>Users can create or join virtual meeting rooms using a unique room ID.</li>
+<li>WebRTC is used for real-time communication.</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure Data Storage:</strong></p>
+<ul>
+<li>User data, including face encodings, is stored in a SQLite database.</li>
+</ul>
+</li>
+<li>
+<p><strong>HTTPS Support:</strong></p>
+<ul>
+<li>The app uses self-signed SSL certificates for secure communication.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="3-technologies-used">3) Technologies Used</h2>
+<ul>
+<li>
+<p><strong>Backend:</strong></p>
+<ul>
+<li>Flask</li>
+<li>Flask-SQLAlchemy</li>
+<li>Flask-Login</li>
+<li>Flask-WTF</li>
+</ul>
+</li>
+<li>
+<p><strong>Face Recognition:</strong></p>
+<ul>
+<li>OpenCV</li>
+<li>face_recognition library</li>
+</ul>
+</li>
+<li>
+<p><strong>Database:</strong></p>
+<ul>
+<li>SQLite</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-Time Communication:</strong></p>
+<ul>
+<li>WebRTC</li>
+</ul>
+</li>
+<li>
+<p><strong>Frontend:</strong></p>
+<ul>
+<li>HTML, CSS, JavaScript</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="4-how-it-works">4) How It Works</h2>
+<h3 id="user-registration"><strong>User Registration</strong></h3>
+<ol>
+<li>The user fills out the registration form and uploads a photo.</li>
+<li>The app processes the photo using OpenCV and extracts the face encoding using the <code>face_recognition</code> library.</li>
+<li>The face encoding is stored in the SQLite database along with the user&rsquo;s details.</li>
+</ol>
+<h3 id="user-login"><strong>User Login</strong></h3>
+<ol>
+<li>The user enters their email and take a photo.</li>
+<li>The app compares the uploaded photo&rsquo;s face encoding with the stored encoding.</li>
+<li>If the face matches, the user is logged in.</li>
+</ol>
+<h3 id="meeting-rooms"><strong>Meeting Rooms</strong></h3>
+<ol>
+<li>Authenticated users can create or join meeting rooms.</li>
+<li>A unique room ID is generated for each meeting.</li>
+<li>WebRTC is used for real-time video and audio communication.</li>
+</ol>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="5-webrtc-integration">5) WebRTC Integration</h2>
+<p>WebRTC (Web Real-Time Communication) is the core technology used for enabling real-time video and audio communication in the meeting rooms. Below is an explanation of how WebRTC is integrated into the project.</p>
+<h3 id="how-webrtc-works"><strong>How WebRTC Works</strong></h3>
+<ol>
+<li>
+<p><strong>Signaling Server:</strong></p>
+<ul>
+<li>The signaling server facilitates the exchange of connection details (SDP and ICE candidates) between peers.</li>
+<li>In this project, the signaling server is implemented using Flask and Socket.IO.</li>
+</ul>
+</li>
+<li>
+<p><strong>STUN and TURN Servers:</strong></p>
+<ul>
+<li>STUN servers are used to discover the public IP address of peers.</li>
+<li>TURN servers are used as a fallback when direct peer-to-peer connections cannot be established.</li>
+</ul>
+</li>
+<li>
+<p><strong>Peer-to-Peer Connection:</strong></p>
+<ul>
+<li>Once the signaling process is complete, WebRTC establishes a direct peer-to-peer connection for video and audio streaming.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="code-explanation"><strong>Code Explanation</strong></h3>
+<h4 id="signaling-server-"><strong>Signaling Server (<code>signaling_server.py</code>)</strong></h4>
+<p>The signaling server handles the exchange of WebRTC signaling messages between peers.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">flask_socketio</span> <span class="kn">import</span> <span class="n">SocketIO</span><span class="p">,</span> <span class="n">emit</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>from flask import Flask</code> → Imports the Flask web framework.</li>
+<li><code>from flask_socketio import SocketIO, emit</code> → Imports Socket.IO for real-time bidirectional communication.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cors_allowed_origins</span><span class="o">=</span><span class="s2">&#34;*&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>app = Flask(__name__)</code> → Initializes the Flask application.</li>
+<li><code>socketio = SocketIO(app, cors_allowed_origins=&quot;*&quot;)</code> → Creates a Socket.IO instance with CORS enabled to allow any origin.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@socketio.on</span><span class="p">(</span><span class="s1">&#39;join-room&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handle_join_room</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">room</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;room&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;room-joined&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;participants&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="n">room</span><span class="o">=</span><span class="n">room</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>@socketio.on('join-room')</code> → Listens for the event when a user joins a room.</li>
+<li><code>room = data['room']</code> → Extracts the room ID from the client data.</li>
+<li><code>emit('room-joined', {'participants': 2}, room=room)</code> → Sends a message back to the room that a user joined.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@socketio.on</span><span class="p">(</span><span class="s1">&#39;offer&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handle_offer</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;offer&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">broadcast</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Listens for an <code>offer</code> from a peer and broadcasts it to other peers.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@socketio.on</span><span class="p">(</span><span class="s1">&#39;answer&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handle_answer</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;answer&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">broadcast</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Listens for an <code>answer</code> and broadcasts it to other peers.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@socketio.on</span><span class="p">(</span><span class="s1">&#39;ice-candidate&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handle_ice_candidate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;ice-candidate&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">broadcast</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Handles ICE candidates and broadcasts them so that peers can establish direct connections.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">socketio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Runs the signaling server on port <code>5001</code>.</li>
+</ul>
+<hr>
+<h4 id="meeting-room-frontend-"><strong>Meeting Room Frontend (<code>meeting.html</code>)</strong></h4>
+<p>The frontend contains the JavaScript code to handle WebRTC connections.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">SIGNALING_SERVER</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span><span class="si">}</span><span class="sb">//</span><span class="si">${</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span><span class="si">}</span><span class="sb">:5001`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">STUN_SERVERS</span> <span class="o">=</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">iceServers</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span> <span class="nx">urls</span><span class="o">:</span> <span class="s1">&#39;stun:stun.l.google.com:19302&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span> <span class="nx">urls</span><span class="o">:</span> <span class="s1">&#39;turn:global.relay.metered.ca:80&#39;</span><span class="p">,</span> <span class="nx">username</span><span class="o">:</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="nx">credential</span><span class="o">:</span> <span class="s1">&#39;pass&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>SIGNALING_SERVER</code> → Defines the signaling server address based on current host.</li>
+<li><code>STUN_SERVERS</code> → Provides STUN and TURN servers for NAT traversal.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="nx">SIGNALING_SERVER</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">peerConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RTCPeerConnection</span><span class="p">(</span><span class="nx">STUN_SERVERS</span><span class="p">);</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>socket = io(SIGNALING_SERVER)</code> → Connects to the signaling server via Socket.IO.</li>
+<li><code>peerConnection = new RTCPeerConnection(STUN_SERVERS)</code> → Creates a new RTCPeerConnection with STUN/TURN servers.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;offer&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">peerConnection</span><span class="p">.</span><span class="nx">setRemoteDescription</span><span class="p">(</span><span class="k">new</span> <span class="nx">RTCSessionDescription</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">offer</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">peerConnection</span><span class="p">.</span><span class="nx">createAnswer</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">peerConnection</span><span class="p">.</span><span class="nx">setLocalDescription</span><span class="p">(</span><span class="nx">answer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;answer&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">answer</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Listens for an <code>offer</code>.</li>
+<li><code>setRemoteDescription</code> → Sets the received offer as the remote session.</li>
+<li><code>createAnswer</code> → Generates an answer.</li>
+<li><code>setLocalDescription(answer)</code> → Sets the local description.</li>
+<li><code>socket.emit('answer', { answer })</code> → Sends the answer back to the signaling server.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;ice-candidate&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">peerConnection</span><span class="p">.</span><span class="nx">addIceCandidate</span><span class="p">(</span><span class="k">new</span> <span class="nx">RTCIceCandidate</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">candidate</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li>Listens for ICE candidates and adds them to the peer connection.</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="6-how-to-run-the-project">6) How to Run the Project</h2>
+<ol>
+<li>
+<p><strong>Clone the repository:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/Mondirkb/Meeting-App-last.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> meeting-web-app
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Create a virtual environment and install dependencies:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -m venv venv
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> venv/bin/activate
+</span></span><span class="line"><span class="cl">pip install -r requirements.txt
+</span></span></code></pre></div></li>
+</ol>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>Creates and activates a Python virtual environment.</li>
+<li>Installs all required dependencies.</li>
+</ul>
+<ol start="3">
+<li><strong>Generate SSL Certificates:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days <span class="m">365</span> -nodes
+</span></span></code></pre></div></li>
+</ol>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>Creates self-signed SSL certificates for secure HTTPS connections.</li>
+</ul>
+<ol start="4">
+<li><strong>Run the Signaling Server:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./run_server.sh
+</span></span></code></pre></div></li>
+</ol>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>Starts the Flask signaling server.</li>
+</ul>
+<ol start="5">
+<li><strong>Access the app in your browser:</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">https://localhost:5000
+</span></span></code></pre></div></li>
+</ol>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>Opens the Meeting App on your local machine.</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="7-challenges-and-solutions">7) Challenges and Solutions</h2>
+<h3 id="challenge-1-face-recognition-accuracy"><strong>Challenge 1: Face Recognition Accuracy</strong></h3>
+<ul>
+<li><strong>Solution:</strong> Used high-quality images and fine-tuned the face recognition model parameters.</li>
+</ul>
+<h3 id="challenge-2-webrtc-connection-issues"><strong>Challenge 2: WebRTC Connection Issues</strong></h3>
+<ul>
+<li><strong>Solution:</strong> Implemented STUN and TURN servers to handle NAT traversal and fallback scenarios.</li>
+</ul>
+<h3 id="challenge-3-secure-data-storage"><strong>Challenge 3: Secure Data Storage</strong></h3>
+<ul>
+<li><strong>Solution:</strong> Used SQLite with encryption and ensured secure handling of user data.</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="8-future-improvements">8) Future Improvements</h2>
+<ul>
+<li>
+<p><strong>Scalability:</strong></p>
+<ul>
+<li>Migrate from SQLite to a more scalable database like PostgreSQL.</li>
+<li>Implement load balancing for the signaling server.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Security:</strong></p>
+<ul>
+<li>Use a trusted SSL certificate instead of self-signed certificates.</li>
+<li>Implement two-factor authentication (2FA).</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional Features:</strong></p>
+<ul>
+<li>Add screen sharing functionality.</li>
+<li>Implement chat functionality within meeting rooms.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="9-webrtc-quality-metrics">9) WebRTC Quality Metrics</h2>
+<p>To better understand the performance of real-time communication, we can calculate <strong>network quality parameters</strong> such as:</p>
+<ul>
+<li><strong>Bandwidth (Throughput):</strong> Amount of data transferred per second.</li>
+<li><strong>RTT (Round Trip Time):</strong> Time for a packet to travel from sender to receiver and back.</li>
+<li><strong>Jitter:</strong> Variation in packet arrival times.</li>
+<li><strong>Packet Loss:</strong> Percentage of packets lost during transmission.</li>
+</ul>
+<h3 id="example-code-javascript">Example Code (JavaScript)</h3>
+<p>You can calculate these metrics in the browser using WebRTC’s <code>getStats()</code> API.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">setInterval</span><span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">stats</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">peerConnection</span><span class="p">.</span><span class="nx">getStats</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">stats</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">report</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">report</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;outbound-rtp&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">report</span><span class="p">.</span><span class="nx">kind</span> <span class="o">===</span> <span class="s2">&#34;video&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Bitrate (kbps):&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">report</span><span class="p">.</span><span class="nx">bytesSent</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Packets Sent:&#34;</span><span class="p">,</span> <span class="nx">report</span><span class="p">.</span><span class="nx">packetsSent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">report</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;remote-inbound-rtp&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">report</span><span class="p">.</span><span class="nx">kind</span> <span class="o">===</span> <span class="s2">&#34;video&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;RTT (ms):&#34;</span><span class="p">,</span> <span class="nx">report</span><span class="p">.</span><span class="nx">roundTripTime</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Jitter (ms):&#34;</span><span class="p">,</span> <span class="nx">report</span><span class="p">.</span><span class="nx">jitter</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Packet Loss (%):&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="p">((</span><span class="nx">report</span><span class="p">.</span><span class="nx">packetsLost</span> <span class="o">/</span> <span class="nx">report</span><span class="p">.</span><span class="nx">packetsReceived</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+</span></span></code></pre></div><p><strong>Explanation:</strong></p>
+<ul>
+<li><code>setInterval(..., 5000)</code> → Runs every 5 seconds to fetch stats.</li>
+<li><code>peerConnection.getStats()</code> → Collects WebRTC connection statistics.</li>
+<li><code>outbound-rtp</code> → Tracks outgoing media (bitrate, packets sent).</li>
+<li><code>remote-inbound-rtp</code> → Tracks stats seen from the remote peer (RTT, jitter, packet loss).</li>
+<li><code>report.roundTripTime</code> → Measures RTT.</li>
+<li><code>report.jitter</code> → Measures jitter.</li>
+<li><code>report.packetsLost / report.packetsReceived</code> → Calculates packet loss percentage.</li>
+</ul>
+<h3 id="what-these-metrics-tell-us">What These Metrics Tell Us</h3>
+<ul>
+<li><strong>High RTT (&gt;300 ms):</strong> Delay in conversation, users notice lag.</li>
+<li><strong>High Jitter (&gt;30 ms):</strong> Video/audio may stutter.</li>
+<li><strong>Packet Loss (&gt;2%):</strong> Video freezes, audio cuts out.</li>
+<li><strong>Bandwidth:</strong> Helps adjust video resolution dynamically.</li>
+</ul>
+<hr>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-09-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://mondirkb.github.io/wiretups/webrtc/" data-title="Meeting Web App with Face Recognition and WebRTC" data-via="mondir_kb" data-hashtags="Flask,Face Recognition,WebRTC"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://mondirkb.github.io/wiretups/webrtc/" data-hashtag="Flask"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://mondirkb.github.io/wiretups/webrtc/" data-title="Meeting Web App with Face Recognition and WebRTC"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://mondirkb.github.io/wiretups/webrtc/" data-title="Meeting Web App with Face Recognition and WebRTC"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://mondirkb.github.io/wiretups/webrtc/" data-title="Meeting Web App with Face Recognition and WebRTC"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/flask/">Flask</a>,&nbsp;<a href="/tags/face-recognition/">Face Recognition</a>,&nbsp;<a href="/tags/webrtc/">WebRTC</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/wiretups/alfred-machine/" class="prev" rel="prev" title="Alfred"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Alfred</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.150.0">Hugo</a> | Theme - <a href="#" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> .</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">KEBIR MOUNDIR CHEMSEDDINE</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"data":{"id-1":"/home","id-2":"/home"},"search":{"algoliaAppID":"9TWZEFW5GA","algoliaIndex":"index.en","algoliaSearchKey":"03e766df0fa23122fe9b56e435ed6b84","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

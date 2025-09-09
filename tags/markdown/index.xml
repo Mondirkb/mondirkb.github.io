@@ -1,16 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Markdown - Tag - Kebir Moundir Chemseddine</title>
-        <link>https://mondirkb.github.io/tags/markdown/</link>
-        <description>Markdown - Tag - Kebir Moundir Chemseddine</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
-            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="https://mondirkb.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
-    <title>Basic Markdown Syntax</title>
-    <link>https://mondirkb.github.io/posts/basic-markdown-syntax/</link>
-    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
-    <author>Dillon</author>
-    <guid>https://mondirkb.github.io/posts/basic-markdown-syntax/</guid>
-    <description><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Kebir Moundir Chemseddine</title>
+    <link>https://mondirkb.github.io/tags/markdown/</link>
+    <description>Recent content in Markdown on Kebir Moundir Chemseddine</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2020 16:45:40 +0800</lastBuildDate>
+    <atom:link href="https://mondirkb.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic Markdown Syntax</title>
+      <link>https://mondirkb.github.io/posts/basic-markdown-syntax/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      <guid>https://mondirkb.github.io/posts/basic-markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flask on Kebir Moundir Chemseddine</title>
+    <link>https://mondirkb.github.io/tags/flask/</link>
+    <description>Recent content in Flask on Kebir Moundir Chemseddine</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Sep 2025 12:00:00 -0800</lastBuildDate>
+    <atom:link href="https://mondirkb.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meeting Web App with Face Recognition and WebRTC</title>
+      <link>https://mondirkb.github.io/wiretups/webrtc/</link>
+      <pubDate>Mon, 08 Sep 2025 12:00:00 -0800</pubDate>
+      <guid>https://mondirkb.github.io/wiretups/webrtc/</guid>
+      <description>&lt;h2 id=&#34;click-here-to-view-the-github-repository&#34;&gt;&lt;a href=&#34;https://github.com/Mondirkb/Meeting-App-last&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Click here to view the GitHub repository!&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This guide explains the development, functionality, and setup of a Meeting Web App that uses Flask, WebRTC, and face recognition for authentication and real-time communication.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#1&#34; rel=&#34;&#34;&gt;Project Overview&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#2&#34; rel=&#34;&#34;&gt;Features&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#3&#34; rel=&#34;&#34;&gt;Technologies Used&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#4&#34; rel=&#34;&#34;&gt;How It Works&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#5&#34; rel=&#34;&#34;&gt;WebRTC Integration&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#6&#34; rel=&#34;&#34;&gt;How to Run the Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#7&#34; rel=&#34;&#34;&gt;Challenges and Solutions&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#8&#34; rel=&#34;&#34;&gt;Future Improvements&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#9&#34; rel=&#34;&#34;&gt;WebRTC Quality Metrics&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-project-overview&#34;&gt;1) Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;This project is a &lt;strong&gt;Meeting Web App&lt;/strong&gt; that allows users to:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

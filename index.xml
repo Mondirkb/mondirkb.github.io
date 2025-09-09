@@ -4,16 +4,58 @@
         <link>https://mondirkb.github.io/</link>
         <description>Kebir Moundir Chemseddine</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
-            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Fri, 01 Jul 2022 21:57:40 &#43;0800</lastBuildDate>
+            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Mon, 08 Sep 2025 12:00:00 -0800</lastBuildDate>
             <atom:link href="https://mondirkb.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Meeting Web App with Face Recognition and WebRTC</title>
+    <link>https://mondirkb.github.io/wiretups/webrtc/</link>
+    <pubDate>Mon, 08 Sep 2025 12:00:00 -0800</pubDate>
+    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
+    <guid>https://mondirkb.github.io/wiretups/webrtc/</guid>
+    <description><![CDATA[<h2 id="click-here-to-view-the-github-repository"><a href="https://github.com/Mondirkb/Meeting-App-last" target="_blank" rel="noopener noreffer ">Click here to view the GitHub repository!</a></h2>
+<p><strong>This guide explains the development, functionality, and setup of a Meeting Web App that uses Flask, WebRTC, and face recognition for authentication and real-time communication.</strong></p>
+<hr>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+<li><a href="#1" rel="">Project Overview</a></li>
+<li><a href="#2" rel="">Features</a></li>
+<li><a href="#3" rel="">Technologies Used</a></li>
+<li><a href="#4" rel="">How It Works</a></li>
+<li><a href="#5" rel="">WebRTC Integration</a></li>
+<li><a href="#6" rel="">How to Run the Project</a></li>
+<li><a href="#7" rel="">Challenges and Solutions</a></li>
+<li><a href="#8" rel="">Future Improvements</a></li>
+<li><a href="#9" rel="">WebRTC Quality Metrics</a></li>
+</ol>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="1-project-overview">1) Project Overview</h2>
+<p>This project is a <strong>Meeting Web App</strong> that allows users to:</p>]]></description>
+</item>
+<item>
     <title>Alfred</title>
     <link>https://mondirkb.github.io/wiretups/alfred-machine/</link>
     <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
     <author>KEBIR MOUNDIR CHEMSEDDINE</author>
     <guid>https://mondirkb.github.io/wiretups/alfred-machine/</guid>
-    <description><![CDATA[Click here if you&rsquo;re interested in the room! This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!
- How many TCP ports are open? What is the username and password for the log in panel? Find a feature of the tool that allows you to execute commands on the underlying system. What is the user.txt flag? Switching shells Size of the payload Token Impersonation Output of guid command Migrating and finding root.]]></description>
+    <description><![CDATA[<h2 id="click-here-if-you"><a href="https://tryhackme.com/room/alfred" target="_blank" rel="noopener noreffer ">Click here if you&rsquo;re interested in the room!</a></h2>
+<p><strong>This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!</strong></p>
+<ol>
+<li><a href="#1" rel="">How many TCP ports are open?</a></li>
+<li><a href="#2" rel="">What is the username and password for the log in panel?</a></li>
+<li><a href="#3" rel="">Find a feature of the tool that allows you to execute commands on the underlying system.</a></li>
+<li><a href="#4" rel="">What is the user.txt flag?</a></li>
+<li><a href="#5" rel="">Switching shells</a></li>
+<li><a href="#6" rel="">Size of the payload</a></li>
+<li><a href="#7" rel="">Token Impersonation</a></li>
+<li><a href="#8" rel="">Output of guid command</a></li>
+<li><a href="#9" rel="">Migrating and finding root.txt</a></li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="1-the-first-question-asks-for-the-number-of-tcp-ports-open-we-can-use-a-nmap-scan-for-this">1) The first question asks for the number of TCP ports open, we can use a nmap scan for this.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmap -vv -sC -sV -A -Pn -oN nmap.log <span class="o">{</span>target_ip_here<span class="o">}</span>
+</span></span></code></pre></div><p>
+</p>]]></description>
 </item>
 <item>
     <title>Doctor machine</title>
@@ -21,8 +63,21 @@
     <pubDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</pubDate>
     <author>moundir</author>
     <guid>https://mondirkb.github.io/wiretups/doctor-machine/</guid>
-    <description><![CDATA[TODO: ADD [Linux, Enumeratin, SSTI, Splunk]
-Doctor (Linux) doctor-machine" doctor-machine  Enumeration rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scanPORT STATE SERVICE REASON VERSION22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu))Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernelExamine Port 80 - Apache server Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.]]></description>
+    <description><![CDATA[<p>TODO: ADD [Linux, Enumeratin, SSTI, Splunk]</p>
+<h1 id="doctor-linux">Doctor (Linux)</h1>
+<figure><a class="lightgallery" href="/wiretups/doctor-machine/pics/logo.png" title="/wiretups/doctor-machine/pics/logo.png" data-thumbnail="/wiretups/doctor-machine/pics/logo.png" data-sub-html="<h2>doctor-machine</h2>">
+        
+    </a><figcaption class="image-caption">doctor-machine</figcaption>
+    </figure>
+<h2 id="enumeration">Enumeration</h2>
+<pre tabindex="0"><code>rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scan
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><h3 id="examine-port-80---apache-server">Examine Port 80 - Apache server</h3>
+<p>Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.</p>]]></description>
 </item>
 <item>
     <title>Emoji Support</title>

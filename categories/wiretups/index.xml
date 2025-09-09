@@ -1,26 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>wiretups - Category - Kebir Moundir Chemseddine</title>
-        <link>https://mondirkb.github.io/categories/wiretups/</link>
-        <description>wiretups - Category - Kebir Moundir Chemseddine</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</managingEditor>
-            <webMaster>moundir.kb@hotmail.com (KEBIR MOUNDIR CHEMSEDDINE)</webMaster><lastBuildDate>Wed, 16 Jun 2021 00:44:44 -0800</lastBuildDate><atom:link href="https://mondirkb.github.io/categories/wiretups/" rel="self" type="application/rss+xml" /><item>
-    <title>Alfred</title>
-    <link>https://mondirkb.github.io/wiretups/alfred-machine/</link>
-    <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
-    <author>KEBIR MOUNDIR CHEMSEDDINE</author>
-    <guid>https://mondirkb.github.io/wiretups/alfred-machine/</guid>
-    <description><![CDATA[Click here if you&rsquo;re interested in the room! This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!
- How many TCP ports are open? What is the username and password for the log in panel? Find a feature of the tool that allows you to execute commands on the underlying system. What is the user.txt flag? Switching shells Size of the payload Token Impersonation Output of guid command Migrating and finding root.]]></description>
-</item>
-<item>
-    <title>Doctor machine</title>
-    <link>https://mondirkb.github.io/wiretups/doctor-machine/</link>
-    <pubDate>Tue, 01 Dec 2020 21:57:40 &#43;0800</pubDate>
-    <author>moundir</author>
-    <guid>https://mondirkb.github.io/wiretups/doctor-machine/</guid>
-    <description><![CDATA[TODO: ADD [Linux, Enumeratin, SSTI, Splunk]
-Doctor (Linux) doctor-machine" doctor-machine  Enumeration rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scanPORT STATE SERVICE REASON VERSION22/tcp open ssh syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)80/tcp open http syn-ack Apache httpd 2.4.41 ((Ubuntu))Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernelExamine Port 80 - Apache server Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiretups on Kebir Moundir Chemseddine</title>
+    <link>https://mondirkb.github.io/categories/wiretups/</link>
+    <description>Recent content in Wiretups on Kebir Moundir Chemseddine</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Jun 2021 00:44:44 -0800</lastBuildDate>
+    <atom:link href="https://mondirkb.github.io/categories/wiretups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alfred</title>
+      <link>https://mondirkb.github.io/wiretups/alfred-machine/</link>
+      <pubDate>Wed, 16 Jun 2021 00:44:44 -0800</pubDate>
+      <guid>https://mondirkb.github.io/wiretups/alfred-machine/</guid>
+      <description>&lt;h2 id=&#34;click-here-if-you&#34;&gt;&lt;a href=&#34;https://tryhackme.com/room/alfred&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Click here if you&amp;rsquo;re interested in the room!&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This guide is meant to be used as a supplement for learning, please tackle this on your own before reading this!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#1&#34; rel=&#34;&#34;&gt;How many TCP ports are open?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#2&#34; rel=&#34;&#34;&gt;What is the username and password for the log in panel?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#3&#34; rel=&#34;&#34;&gt;Find a feature of the tool that allows you to execute commands on the underlying system.&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#4&#34; rel=&#34;&#34;&gt;What is the user.txt flag?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#5&#34; rel=&#34;&#34;&gt;Switching shells&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#6&#34; rel=&#34;&#34;&gt;Size of the payload&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#7&#34; rel=&#34;&#34;&gt;Token Impersonation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#8&#34; rel=&#34;&#34;&gt;Output of guid command&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#9&#34; rel=&#34;&#34;&gt;Migrating and finding root.txt&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;1-the-first-question-asks-for-the-number-of-tcp-ports-open-we-can-use-a-nmap-scan-for-this&#34;&gt;1) The first question asks for the number of TCP ports open, we can use a nmap scan for this.&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmap -vv -sC -sV -A -Pn -oN nmap.log &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;target_ip_here&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;https://mondirkb.github.io/svg/loading.min.svg&#34;&#xA;        data-src=&#34;https://user-images.githubusercontent.com/60508293/121830197-5854e580-cc79-11eb-9b1e-222a48c6e248.png&#34;&#xA;        data-srcset=&#34;https://user-images.githubusercontent.com/60508293/121830197-5854e580-cc79-11eb-9b1e-222a48c6e248.png, https://user-images.githubusercontent.com/60508293/121830197-5854e580-cc79-11eb-9b1e-222a48c6e248.png 1.5x, https://user-images.githubusercontent.com/60508293/121830197-5854e580-cc79-11eb-9b1e-222a48c6e248.png 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;https://user-images.githubusercontent.com/60508293/121830197-5854e580-cc79-11eb-9b1e-222a48c6e248.png&#34;&#xA;        title=&#34;image&#34; /&gt;&#xA;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;https://mondirkb.github.io/svg/loading.min.svg&#34;&#xA;        data-src=&#34;https://user-images.githubusercontent.com/60508293/121830228-699df200-cc79-11eb-8f13-f8aff52090b5.png&#34;&#xA;        data-srcset=&#34;https://user-images.githubusercontent.com/60508293/121830228-699df200-cc79-11eb-8f13-f8aff52090b5.png, https://user-images.githubusercontent.com/60508293/121830228-699df200-cc79-11eb-8f13-f8aff52090b5.png 1.5x, https://user-images.githubusercontent.com/60508293/121830228-699df200-cc79-11eb-8f13-f8aff52090b5.png 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;https://user-images.githubusercontent.com/60508293/121830228-699df200-cc79-11eb-8f13-f8aff52090b5.png&#34;&#xA;        title=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Doctor machine</title>
+      <link>https://mondirkb.github.io/wiretups/doctor-machine/</link>
+      <pubDate>Tue, 01 Dec 2020 21:57:40 +0800</pubDate>
+      <guid>https://mondirkb.github.io/wiretups/doctor-machine/</guid>
+      <description>&lt;p&gt;TODO: ADD [Linux, Enumeratin, SSTI, Splunk]&lt;/p&gt;&#xA;&lt;h1 id=&#34;doctor-linux&#34;&gt;Doctor (Linux)&lt;/h1&gt;&#xA;&lt;figure&gt;&lt;a class=&#34;lightgallery&#34; href=&#34;https://mondirkb.github.io/wiretups/doctor-machine/pics/logo.png&#34; title=&#34;/wiretups/doctor-machine/pics/logo.png&#34; data-thumbnail=&#34;/wiretups/doctor-machine/pics/logo.png&#34; data-sub-html=&#34;&lt;h2&gt;doctor-machine&lt;/h2&gt;&#34;&gt;&#xA;        &lt;img&#xA;            class=&#34;lazyload&#34;&#xA;            src=&#34;https://mondirkb.github.io/svg/loading.min.svg&#34;&#xA;            data-src=&#34;https://mondirkb.github.io/wiretups/doctor-machine/pics/logo.png&#34;&#xA;            data-srcset=&#34;https://mondirkb.github.io/wiretups/doctor-machine/pics/logo.png, https://mondirkb.github.io/wiretups/doctor-machine/pics/logo.png 1.5x, https://mondirkb.github.io/wiretups/doctor-machine/pics/logo.png 2x&#34;&#xA;            data-sizes=&#34;auto&#34;&#xA;            alt=&#34;/wiretups/doctor-machine/pics/logo.png&#34; /&gt;&#xA;    &lt;/a&gt;&lt;figcaption class=&#34;image-caption&#34;&gt;doctor-machine&lt;/figcaption&gt;&#xA;    &lt;/figure&gt;&#xA;&lt;h2 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rustscan --ulimit 5000 10.129.2.21 -- -sV -o port_scan&#xD;&#xA;&#xD;&#xA;PORT   STATE SERVICE REASON  VERSION&#xD;&#xA;22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)&#xD;&#xA;80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))&#xD;&#xA;Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;examine-port-80---apache-server&#34;&gt;Examine Port 80 - Apache server&lt;/h3&gt;&#xA;&lt;p&gt;Accessing Port 80 via the browser, reveals a website which contains information regarding services and contacts of several doctors.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
